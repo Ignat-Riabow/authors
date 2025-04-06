@@ -1,0 +1,155 @@
+/* Установка переменных */
+:root {
+    --image-width-full: 300px; /* Ширина для полной версии фото */
+    --image-width-eyes: 200px; /* Ширина для версии взгляда */
+    --image-height: auto; /* Высота для обоих видов */
+}
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5DC; /* Бежевый фон */
+    color: #8B0000; /* Темно-красный цвет текста */
+    margin: 0;
+    padding: 0;
+}
+
+/* Контейнер авторов */
+#authorsContainer {
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Блок автора */
+.authorBlock {
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid #8B0000; /* Темно-красный */
+    background-color: #FFF5F5; /* Светлый бежевый с красным оттенком */
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Фото автора — общий стиль */
+.authorPhoto {
+    height: var(--image-height);
+    border: 1px solid #8B0000; /* Темно-красная рамка */
+    border-radius: 5px;
+    transition: max-width 0.3s ease-in-out; /* Плавное изменение размеров */
+}
+
+/* Фото автора — полная версия */
+.authorPhoto.full {
+    max-width: var(--image-width-full);
+}
+
+/* Фото автора — версия взгляда */
+.authorPhoto.eyes {
+    max-width: var(--image-width-eyes);
+}
+
+/* Кнопка смены вида */
+.toggleButton {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8B0000; /* Темно-красный фон кнопки */
+    color: #fff; /* Белый текст */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggleButton:hover {
+    background-color: #B22222; /* Ярко-красный при наведении */
+}
+
+/* Блок результата */
+.resultIcon {
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    color: #8B0000; /* Темно-красный */
+}
+
+/* Финальный счет */
+#scoreBlock {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#finalScore {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8B0000; /* Темно-красный текст */
+    background-color: #FFF5F5; /* Светлый бежевый фон */
+    border: 2px solid #8B0000; /* Темно-красная рамка */
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Кнопки выбора авторов */
+.author-choices button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #8B0000; /* Темно-красный фон кнопки */
+    color: #fff; /* Белый текст */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.author-choices button:hover {
+    background-color: #B22222; /* Ярко-красный при наведении */
+}
+
+.authorPhoto {
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.authorPhoto.eyes {
+    opacity: 1;
+}
+
+.authorPhoto.full {
+    opacity: 0;
+}
+
+/* Эффект появления полного изображения */
+.authorPhoto.full.visible {
+    opacity: 1;
+}
+
+/* Эффект для кнопки "Сменить вид" */
+.toggleButton {
+    transition: opacity 0.5s ease-in-out;
+}
+.toggleButton.show {
+    opacity: 1;
+}
+.toggleButton.hide {
+    opacity: 0;
+}
