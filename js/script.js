@@ -192,7 +192,7 @@ function handleChoice(selectedAuthor, correctAuthor, authorBlock) {
 function showFinalScore() {
     const finalScoreContainer = document.getElementById("finalScore");
     if (finalScoreContainer) {
-        finalScoreContainer.textContent = `Гульня завершана! Ваш фінальны лік: ${score} із ${chosenAuthors.length}`;
+        finalScoreContainer.textContent = `Гульня завершана! Ваш фінальны лік: ${score} з ${chosenAuthors.length}`;
         finalScoreContainer.style.display = "block";
     } else {
         console.error("Элемент finalScore не найден на странице.");
