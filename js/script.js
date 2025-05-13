@@ -205,12 +205,12 @@ function togglePhotoView(photoElement, toggleButton) {
         photoElement.src = photoElement.src.replace("eyes", "full");
         photoElement.classList.remove("eyes");
         photoElement.classList.add("full");
-        toggleButton.textContent = "Сменить на взгляд";
+        toggleButton.textContent = "Вярнуцца на погляд";
     } else {
         photoElement.src = photoElement.src.replace("full", "eyes");
         photoElement.classList.remove("full");
         photoElement.classList.add("eyes");
-        toggleButton.textContent = "Сменить на полный вид";
+        toggleButton.textContent = "Вярнуцца на фото";
     }
 }
 
